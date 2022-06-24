@@ -11,3 +11,6 @@ docker ps -a (list all containers)
 docker ls(list all images)
 
 docker push (pushing image to repository)
+
+# View Docker Base Folder- This command runs a shell in Ubuntu docker image, mounting docker's file system to /data directory. There you can find a complete file system under /data, including the ./var/lib/docker. If you want, you can "chroot /data" in the shell prompt to have a better view
+docker run -v /:/data -it ubuntu /bin/bash
